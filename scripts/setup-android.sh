@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 # Installs JDK 17, the Android SDK pieces and Gradle under ~/.local/android. Safe to re-run.
 set -euo pipefail
-source "$(dirname "$0")/env.sh"
+LTTV_TOOLS="${LTTV_TOOLS:-$HOME/.local/android}"
+export JAVA_HOME="$LTTV_TOOLS/jdk"
+export ANDROID_HOME="$LTTV_TOOLS/sdk"
+export ANDROID_SDK_ROOT="$ANDROID_HOME"
+export PATH="$JAVA_HOME/bin:$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
 mkdir -p "$LTTV_TOOLS"
 tmp=$(mktemp -d)
 trap 'rm -rf "$tmp"' EXIT
