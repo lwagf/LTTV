@@ -1,0 +1,42 @@
+:root {
+	--bg: #0e0e12;
+	--text: #e8e8ee;
+	--accent: #16a34a;
+	--text-dim: #9a9aa8;
+	--surface: #18181d;
+	--danger: #ff6b6b;
+	color-scheme: dark;
+}
+
+html,
+body {
+	margin: 0;
+	background: transparent;
+	color: var(--text);
+	font-family: system-ui, sans-serif;
+	/* Scales with the viewport (the stick's WebView is 960 CSS px wide at DPR 2). */
+	font-size: 1.875vw;
+}
+
+/*
+ * Screens paint their own background (only the player stays transparent) and start where the
+ * 5rem rail ends, so spatial navigation sees them as being to its right.
+ */
+.screen {
+	position: fixed;
+	inset: 0 0 0 5rem;
+	padding: 2.5rem 3rem 2rem 2rem;
+	box-sizing: border-box;
+	overflow: hidden;
+	background: var(--bg);
+}
+
+button {
+	font: inherit;
+	color: inherit;
+}
+
+.screen-title {
+	margin: 0;
+	font-size: 1.6rem;
+}

@@ -1,0 +1,62 @@
+.seekbar {
+	position: absolute;
+	right: 2rem;
+	bottom: 5.2rem;
+	left: 2rem;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 0.5rem 0.8rem;
+	border-radius: 0.6rem;
+	background: rgb(0 0 0 / 55%);
+	font-size: 0.8rem;
+}
+
+.seekbar-label {
+	min-width: 4.5rem;
+	font-variant-numeric: tabular-nums;
+}
+
+.seekbar-label.live {
+	color: #ff4b4b;
+	font-weight: 700;
+}
+
+.seekbar-track {
+	position: relative;
+	flex: 1;
+	height: 0.35rem;
+	border-radius: 0.2rem;
+	background: rgb(255 255 255 / 25%);
+}
+
+.seekbar-fill {
+	height: 100%;
+	border-radius: inherit;
+	background: var(--accent);
+}
+
+/* The playhead. */
+.seekbar-fill::after {
+	content: "";
+	float: right;
+	width: 0.8rem;
+	height: 0.8rem;
+	margin: -0.22rem -0.4rem 0 0;
+	border-radius: 50%;
+	background: #fff;
+}
+
+/* Rewind allowance not watched yet: drawn over the track, so it can't be reached. */
+.seekbar-unavailable {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	border-radius: inherit;
+	background: repeating-linear-gradient(
+		135deg,
+		rgb(0 0 0 / 55%) 0 0.3rem,
+		rgb(0 0 0 / 35%) 0.3rem 0.6rem
+	);
+}

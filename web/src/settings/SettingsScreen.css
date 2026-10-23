@@ -1,0 +1,37 @@
+.settings-list {
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+	max-width: 36rem;
+	margin-top: 1.5rem;
+}
+
+.setting {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.6rem 1rem;
+	border: 0;
+	border-radius: 0.5rem;
+	background: var(--surface);
+	text-align: left;
+	cursor: pointer;
+}
+
+.setting.focused {
+	background: var(--accent);
+	color: #fff;
+}
+
+.setting-value {
+	color: var(--text-dim);
+}
+
+.setting.focused .setting-value {
+	color: #fff;
+}
+
+.settings-version {
+	margin-top: 2rem;
+	color: var(--text-dim);
+	font-size: 0.7rem;
+}

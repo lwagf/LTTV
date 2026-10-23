@@ -1,0 +1,59 @@
+.chat-overlay {
+	position: absolute;
+	bottom: 6%;
+	left: 3%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0.35rem;
+	width: 38%;
+	pointer-events: none;
+}
+
+/* In vw, not rem, so chat size is independent of the UI scale. */
+.chat-s {
+	font-size: 1.04vw;
+}
+
+.chat-m {
+	font-size: 1.25vw;
+}
+
+.chat-l {
+	font-size: 1.56vw;
+}
+
+.bubble {
+	max-width: 100%;
+	padding: 0.25em 0.6em;
+	border-radius: 8px;
+	background: rgb(0 0 0 / 55%);
+	line-height: 1.5;
+	overflow-wrap: anywhere;
+	animation-name: bubble-fade;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.bubble.action {
+	font-style: italic;
+}
+
+.bubble-name {
+	font-weight: 700;
+}
+
+.bubble-emote {
+	height: 1.5em;
+	vertical-align: middle;
+}
+
+@keyframes bubble-fade {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}

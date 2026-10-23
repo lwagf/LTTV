@@ -1,0 +1,94 @@
+.rail {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 0.6rem;
+	/* Never widens (spatial nav must see content to its right); ::before draws the open panel. */
+	width: 5rem;
+	padding: 0 0.6rem;
+	box-sizing: border-box;
+	overflow: visible;
+}
+
+.rail::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	width: 5rem;
+	background: var(--surface);
+	transition: width 120ms ease-out;
+}
+
+/* Labels slide out over the content while the rail has focus. */
+.rail.open::before {
+	width: 14rem;
+	box-shadow: 0.5rem 0 2rem rgb(0 0 0 / 60%);
+}
+
+.rail-logo {
+	position: absolute;
+	top: 1.4rem;
+	right: 0;
+	left: 0;
+	color: var(--accent);
+	font-size: 0.8rem;
+	font-weight: 800;
+	letter-spacing: 0.08em;
+	text-align: center;
+}
+
+.rail.open .rail-logo {
+	right: -9rem;
+	font-size: 1.3rem;
+}
+
+.rail-item {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	width: 100%;
+	padding: 0.6rem 0.7rem;
+	border: 0;
+	border-radius: 0.6rem;
+	background: none;
+	color: var(--text-dim);
+	font: inherit;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.rail.open .rail-item {
+	width: 12.8rem;
+}
+
+.rail-item svg {
+	flex: none;
+	width: 1.6rem;
+	height: 1.6rem;
+	fill: currentcolor;
+}
+
+.rail-item.active {
+	color: var(--text);
+}
+
+.rail-item.focused {
+	background: var(--accent);
+	color: #fff;
+}
+
+.rail-label {
+	opacity: 0;
+}
+
+.rail.open .rail-label {
+	opacity: 1;
+}

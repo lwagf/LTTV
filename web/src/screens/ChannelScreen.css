@@ -1,0 +1,33 @@
+.channel-status {
+	margin: 0.3rem 0 1.4rem;
+	color: var(--text-dim);
+}
+
+.channel-live {
+	display: flex;
+	align-items: center;
+	gap: 1.2rem;
+	margin-bottom: 2rem;
+}
+
+.watch-live {
+	flex: none;
+	padding: 0.6rem 1.4rem;
+	border: 0;
+	border-radius: 0.5rem;
+	background: var(--surface);
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.watch-live.focused {
+	background: var(--accent);
+	color: #fff;
+}
+
+.channel-title {
+	overflow: hidden;
+	color: var(--text-dim);
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

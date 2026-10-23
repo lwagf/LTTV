@@ -1,0 +1,31 @@
+.login {
+	position: fixed;
+	inset: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: var(--bg);
+}
+
+.login-title {
+	margin: 0 0 1.5rem;
+	color: var(--accent);
+	font-size: 2rem;
+	letter-spacing: 0.2em;
+}
+
+.login-code {
+	margin: 0;
+	font-size: 4rem;
+	font-weight: 700;
+	letter-spacing: 0.15em;
+}
+
+.login-hint {
+	color: var(--text-dim);
+}
+
+.login-error {
+	color: var(--danger);
+}

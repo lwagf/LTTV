@@ -1,0 +1,71 @@
+/* Transparent so the native video layer shows through. */
+.player {
+	position: fixed;
+	inset: 0;
+}
+
+.player-banner {
+	position: absolute;
+	top: 1.5rem;
+	left: 2rem;
+	padding: 0.4rem 0.9rem;
+	border-radius: 0.5rem;
+	background: rgb(0 0 0 / 60%);
+	font-size: 0.8rem;
+}
+
+.player-paused {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 0.6rem 1.4rem;
+	border-radius: 0.6rem;
+	background: rgb(0 0 0 / 60%);
+	font-size: 1.2rem;
+	transform: translate(-50%, -50%);
+}
+
+.player-spinner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: var(--text-dim);
+}
+
+.player-message {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: var(--bg);
+}
+
+.player-message-title {
+	margin: 0 0 0.6rem;
+	font-size: 1.4rem;
+	font-weight: 700;
+}
+
+.player-message-hint {
+	margin: 0;
+	color: var(--text-dim);
+	font-size: 0.8rem;
+}
+
+.player-chat {
+	position: absolute;
+	inset: 0;
+	transition: transform 150ms ease-out;
+}
+
+/* Lift chat clear of the seekbar, and of the options bar plus seekbar when that is open. */
+.player-chat.above-seekbar {
+	transform: translateY(-4rem);
+}
+
+.player-chat.above-options {
+	transform: translateY(-8rem);
+}

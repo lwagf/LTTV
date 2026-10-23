@@ -1,0 +1,105 @@
+.search {
+	display: flex;
+	gap: 3rem;
+}
+
+.keyboard {
+	flex: none;
+	width: 22rem;
+}
+
+.search-query {
+	min-height: 2.2rem;
+	margin-bottom: 1rem;
+	padding: 0.4rem 0.8rem;
+	border-bottom: 2px solid var(--accent);
+	font-size: 1.3rem;
+	white-space: pre;
+}
+
+.keys {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 0.4rem;
+}
+
+.key {
+	padding: 0.5rem 0;
+	border: 0;
+	border-radius: 0.4rem;
+	background: var(--surface);
+	font-size: 0.9rem;
+	cursor: pointer;
+}
+
+.key.wide {
+	grid-column: span 2;
+}
+
+.key.focused,
+.result.focused {
+	background: var(--accent);
+	color: #fff;
+}
+
+.results {
+	flex: 1;
+	min-width: 0;
+	overflow: hidden;
+}
+
+.results-title {
+	margin: 0 0 0.5rem;
+	color: var(--text-dim);
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
+.results-title:not(:first-child) {
+	margin-top: 1.2rem;
+}
+
+.results-status {
+	color: var(--text-dim);
+}
+
+.result {
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
+	width: 100%;
+	margin-bottom: 0.3rem;
+	padding: 0.45rem 0.8rem;
+	border: 0;
+	border-radius: 0.5rem;
+	background: none;
+	text-align: left;
+	cursor: pointer;
+}
+
+.result-name {
+	font-weight: 600;
+}
+
+.result-live {
+	padding: 0 0.35rem;
+	border-radius: 0.25rem;
+	background: #e91916;
+	color: #fff;
+	font-size: 0.6rem;
+	font-weight: 700;
+}
+
+.result-sub {
+	overflow: hidden;
+	color: var(--text-dim);
+	font-size: 0.75rem;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.result-box {
+	width: 1.8rem;
+	border-radius: 0.2rem;
+}

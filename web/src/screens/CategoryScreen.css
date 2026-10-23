@@ -1,0 +1,30 @@
+.category-rows {
+	margin-top: 1rem;
+	transition: transform 180ms ease-out;
+}
+
+.category-status {
+	align-self: center;
+	margin: 0;
+	color: var(--text-dim);
+	font-size: 0.8rem;
+	white-space: nowrap;
+}
+
+.see-all {
+	flex: none;
+	width: 8rem;
+	aspect-ratio: 16 / 9;
+	align-self: flex-start;
+	border: 3px solid transparent;
+	border-radius: 0.5rem;
+	background: var(--surface);
+	color: var(--text-dim);
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.see-all.focused {
+	border-color: var(--accent);
+	color: var(--text);
+}

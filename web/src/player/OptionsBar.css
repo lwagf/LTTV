@@ -1,0 +1,26 @@
+.options-bar {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6rem;
+	padding: 1.2rem 2rem 1.6rem;
+	background: linear-gradient(to top, rgb(0 0 0 / 85%), rgb(0 0 0 / 0%));
+}
+
+.opt {
+	padding: 0.45rem 0.9rem;
+	border: 2px solid transparent;
+	border-radius: 0.5rem;
+	background: rgb(255 255 255 / 12%);
+	font-size: 0.8rem;
+	cursor: pointer;
+}
+
+.opt.focused {
+	border-color: var(--accent);
+	background: var(--accent);
+	color: #fff;
+}

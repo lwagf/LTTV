@@ -1,0 +1,124 @@
+.help-body {
+	display: flex;
+	gap: 2.5rem;
+	align-items: flex-start;
+	margin-top: 1.2rem;
+}
+
+.remote {
+	flex: none;
+	height: calc(100vh - 8rem);
+	max-height: 30rem;
+}
+
+.remote-body {
+	fill: var(--surface);
+	stroke: #2a2a33;
+	stroke-width: 2;
+}
+
+.remote-dpad {
+	fill: #24242c;
+	stroke: var(--accent);
+	stroke-width: 2;
+}
+
+.remote-select {
+	fill: #2e2e38;
+	stroke: var(--accent);
+	stroke-width: 2;
+}
+
+.remote-key circle,
+.remote-key-shape {
+	fill: #2e2e38;
+	stroke: var(--accent);
+	stroke-width: 1.5;
+}
+
+.remote-glyph {
+	fill: var(--text);
+	stroke: var(--text);
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-width: 0;
+}
+
+.remote-glyph path[fill="none"],
+.remote-glyph circle[fill="none"] {
+	stroke-width: 1.8;
+}
+
+/* Buttons Fire TV handles itself. */
+.remote-key.muted circle,
+.remote-key-shape.muted {
+	stroke: #3a3a44;
+}
+
+.remote-key.muted .remote-glyph,
+.remote-glyph.muted {
+	opacity: 0.35;
+}
+
+.remote-marker line {
+	stroke: var(--accent);
+	stroke-width: 1;
+}
+
+.remote-marker-dot {
+	fill: var(--accent);
+}
+
+.remote-marker text {
+	fill: #fff;
+	font-size: 11px;
+	font-weight: 700;
+}
+
+.help-list {
+	flex: 1;
+	min-width: 0;
+}
+
+.help-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 0.62rem;
+}
+
+.help-table th {
+	padding: 0.3rem 0.5rem;
+	color: var(--text-dim);
+	font-weight: 500;
+	text-align: left;
+	border-bottom: 1px solid #2a2a33;
+}
+
+.help-table td {
+	padding: 0.35rem 0.5rem;
+	vertical-align: top;
+	border-bottom: 1px solid #22222a;
+}
+
+.help-name {
+	font-weight: 700;
+	white-space: nowrap;
+}
+
+.help-num {
+	display: inline-grid;
+	place-items: center;
+	width: 1.2rem;
+	height: 1.2rem;
+	border-radius: 50%;
+	background: var(--accent);
+	color: #fff;
+	font-size: 0.55rem;
+	font-weight: 700;
+}
+
+.help-note {
+	margin-top: 0.8rem;
+	color: var(--text-dim);
+	font-size: 0.6rem;
+}

@@ -1,0 +1,35 @@
+.row {
+	margin-bottom: 1.6rem;
+}
+
+.row-head {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 0.7rem;
+}
+
+.row-title {
+	margin: 0;
+	font-size: 1rem;
+}
+
+/* Padding leaves room for the focused tile's 5% scale plus its outline. */
+.row-viewport {
+	margin: -1rem;
+	padding: 1rem;
+	overflow: hidden;
+}
+
+.row-track {
+	position: relative;
+	display: flex;
+	gap: 1.2rem;
+	transition: transform 150ms ease-out;
+}
+
+.row-empty {
+	margin: 0;
+	color: var(--text-dim);
+	font-size: 0.8rem;
+}

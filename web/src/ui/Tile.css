@@ -1,0 +1,83 @@
+.tile {
+	flex: none;
+	display: block;
+	padding: 0;
+	border: 0;
+	background: none;
+	text-align: left;
+	cursor: pointer;
+}
+
+.tile-wide {
+	width: 20rem;
+}
+
+.tile-tall {
+	width: 9.5rem;
+}
+
+.tile-art {
+	position: relative;
+	overflow: hidden;
+	border-radius: 0.5rem;
+	background: var(--surface);
+	outline: 3px solid transparent;
+	outline-offset: 2px;
+	transition: transform 100ms ease-out;
+}
+
+.tile-wide .tile-art {
+	aspect-ratio: 16 / 9;
+}
+
+.tile-tall .tile-art {
+	aspect-ratio: 3 / 4;
+}
+
+.tile-art img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.tile-placeholder {
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(135deg, #15301f, var(--surface));
+}
+
+.tile.focused .tile-art {
+	outline-color: var(--accent);
+	transform: scale(1.05);
+}
+
+.tile-badge {
+	position: absolute;
+	top: 0.4rem;
+	left: 0.4rem;
+	padding: 0 0.35rem;
+	border-radius: 0.25rem;
+	background: #e91916;
+	color: #fff;
+	font-size: 0.6rem;
+	font-weight: 700;
+}
+
+.tile-title,
+.tile-subtitle {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.tile-title {
+	margin-top: 0.45rem;
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+
+.tile-subtitle {
+	color: var(--text-dim);
+	font-size: 0.7rem;
+}

@@ -1,0 +1,17 @@
+.sort-button {
+	flex: none;
+	padding: 0.25rem 0.7rem;
+	border: 2px solid var(--surface);
+	border-radius: 0.5rem;
+	background: var(--surface);
+	color: var(--text-dim);
+	font-size: 0.75rem;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.sort-button.focused {
+	border-color: var(--accent);
+	background: var(--accent);
+	color: #fff;
+}
