@@ -1,5 +1,7 @@
 # LTTV
 
+**Just want to install it? Skip to [End users: how to install](#end-users-how-to-install).**
+
 A personal Twitch client for the Fire TV Stick. Remote-friendly React UI, fading-bubble chat over
 full-screen video, and the smallest permission footprint possible:
 
@@ -8,6 +10,29 @@ full-screen video, and the smallest permission footprint possible:
 - **Chat:** read anonymously, so the app cannot post as you.
 - **Android:** `INTERNET`, plus `ACCESS_NETWORK_STATE`, which the video library adds. The build
   fails if anything else appears.
+
+## End users: how to install
+
+No coding needed, just your Fire TV remote and a phone or computer to log in.
+
+1. On the Fire TV, search for **Downloader** (by AFTVnews) and install it from the Amazon Appstore.
+2. Allow Downloader to install apps: *Settings → My Fire TV → Developer options → Install unknown
+   apps → Downloader → On*. If you don't see *Developer options*, go to *Settings → My Fire TV →
+   About*, select your device name 7 times until it says you're a developer, then go back.
+3. Open Downloader (choose **Allow** if it asks for access to files), select the address box and
+   type:
+
+   ```
+   https://github.com/lwagf/LTTV/releases/latest/download/lttv.apk
+   ```
+
+   Select **Go**. When the download finishes, choose **Install**, then **Done**. Downloader then
+   offers to delete the downloaded file, which is safe to do.
+4. Open **LTTV** from *Your Apps & Channels* (hold the Home button → *Apps*). It shows a code: on
+   your phone or computer, go to <https://twitch.tv/activate>, sign in and enter the code.
+
+To update, repeat step 3 with the same address. It installs over the old version and keeps you
+logged in.
 
 ## How it fits together
 
